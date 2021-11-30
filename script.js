@@ -16,8 +16,8 @@ app.use(cors());
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'S1w2e3t4a@',
-  database: 'ais',
+  password: 'Neelabja@123',
+  database: 'ais_student_master',
   insecureAuth: true,
 });
 
@@ -314,25 +314,6 @@ app.post('/get_previous_due_detail_secondTable/', function (req, resp) {
   });
 });
 
-// app.post('/get_invoice_no/', function (req, resp) {
-
-//   masterModel.get_invoice_no(connection, req.body.studentid, function (err, result) {
-//     //console.log(result);
-//     if (err) {
-//       console.log(err);
-//     }
-//     else {
-//       var responseData = {
-//         //requestUrl: req.originalUrl,
-//         data: result,
-//       }
-//       //   console.log(responseData);
-//       resp.send(responseData);
-//     }
-
-//   });
-// });
-
 app.post('/get_invoice_no/', function (req, resp) {
 
   masterModel.get_invoice_no(connection, req.body.studentid, function (err, result) {
@@ -356,6 +337,7 @@ app.post('/get_invoice_no/', function (req, resp) {
 
   });
 });
+
 app.post('/upcoming_dues/', function (req, resp) {
 
   masterModel.get_upcoming_dues(connection, req.body.studentid, function (err, result) {
@@ -464,7 +446,6 @@ app.post('/get_Total_invoice_amount/', function (req, resp) {
 
   });
 });
-
 
 app.post('/get_previous_details/', function (req, resp) {
 
