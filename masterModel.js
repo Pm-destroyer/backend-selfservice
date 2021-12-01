@@ -8,7 +8,7 @@ module.exports = {
 
   //Customer
 
-  // verification of student
+  // verification of student.
   
   get_student: function(connection,id, controllerCallback) {    
     var sql = " SELECT * from student_master WHERE studentID= '"+id+"' and status= 'Active' ";
